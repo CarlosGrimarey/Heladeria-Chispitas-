@@ -1,0 +1,219 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fdfcfb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAV */
+.barra {
+  width: 100%;
+  background-color: #996596;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  padding: 5px 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #c45063, #996596);
+}
+
+.enlaces {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.enlaces a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.enlaces a:hover {
+  background-color: #fff;
+  color: #996596;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* HEADER */
+.encabezado {
+  width: 100%;
+  height: 60vh;
+  background: url("../assets/fondo-quienessomos.png") no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(153, 101, 150, 0.6);
+  z-index: 1;
+  border-bottom-left-radius: 40% 10%;
+  border-bottom-right-radius: 40% 10%;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.encabezado h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.encabezado p {
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
+
+/* PRINCIPAL */
+.principal {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* QUIÉNES SOMOS */
+.titulo {
+  font-size: 32px;
+  color: #996596;
+  margin-bottom: 25px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 2px solid #996596;
+  background-color: #f7e6f0;
+}
+
+.parrafo {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1.5px solid #996596;
+  background: #fff8fb;
+}
+
+/* MISIÓN Y VISIÓN */
+.valores {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.carta {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border: 2px solid #996596;
+}
+
+.carta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.carta .icono {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.carta h3 {
+  color: #996596;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.carta p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* EQUIPO */
+.equipo img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  border: 2px solid #996596;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.mensajito {
+  font-size: 22px;
+  color: #996596;
+  margin-top: 12px;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 2px solid #996596;
+  background-color: #f7e6f0;
+}
+
+/* FOOTER */
+.pie {
+  background-color: #996596;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 20px;
+  font-family: 'Pacifico', cursive;
+  margin-top: 60px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .valores { flex-direction: column; gap: 25px; align-items: center; }
+  .carta { padding: 20px; }
+}
+
+@media (max-width: 480px) {
+  .encabezado h1 { font-size: 28px; }
+  .encabezado p { font-size: 16px; }
+  .titulo { font-size: 24px; }
+  .parrafo { font-size: 15px; padding: 15px; }
+  .mensajito { font-size: 18px; padding: 8px 12px; }
+  .carta .icono { font-size: 36px; }
+}
